@@ -1,0 +1,41 @@
+How do you create nested routes react-router-dom configuration?
+=>const appRouter = createBrowserRouter([
+  {
+    path: "/",
+    element: <AppLayout/>,
+    errorElement: <Error/>,
+    children: [
+      {
+        path: "/",
+        element: <Body/>,
+      },
+      {
+        path: "/about",
+        element: <About/>,
+        children: [
+          {
+            path: "profile",
+            element: <Profile/>,
+          },
+        ],
+      },
+      }])
+      
+ What is the order of life cycle method calls in Class Based Components?
+ =>Constructor
+ Render
+ ComponentDidMount
+ ComponentDidUpdate
+ ComponentWillUnMount
+ 
+ 
+ Why do we use componetDidMount?
+ componentDidMount() is invoked immediately after a component is mounted (inserted into the tree). Initialization that requires DOM nodes 
+ should go here. If you need to load data from a remote endpoint, this is a good place to instantiate the network request.
+ 
+ 
+ 
+ Why do we use componentWillUnMount? Show with example?
+ componentWillUnmount() is invoked immediately before a component is unmounted and destroyed. Perform any necessary cleanup in this method, 
+ such as invalidating timers, canceling network requests, or cleaning up any subscriptions that were created in componentDidMount().
+ 
